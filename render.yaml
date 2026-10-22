@@ -3,6 +3,7 @@ services:
   - type: web
     name: youtube-backend
     env: docker
+    plan: free
     dockerfilePath: ./song/Dockerfile
     dockerContext: ./song
     envVars:
