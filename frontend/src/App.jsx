@@ -124,7 +124,7 @@ export default function App() {
           matchesCategory =
             video.genre?.toLowerCase() === activeCategory.toLowerCase() ||
             (activeCategory === 'Music' &&
-              ['pop', 'rock', 'hip hop', 'chillhop', 'r&b / soul', 'music'].includes(
+              ['pop', 'rock', 'hip hop', 'chillhop', 'r&b / soul', 'music', 'opm'].includes(
                 video.genre?.toLowerCase()
               ));
         }

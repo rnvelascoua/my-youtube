@@ -46,10 +46,7 @@ services:
         destination: /index.html
     envVars:
       - key: VITE_API_BASE_URL
-        fromService:
-          type: web
-          name: youtube-backend
-          property: host
+        value: https://youtube-backend-xq6q.onrender.com
 
 databases:
   - name: youtube-db

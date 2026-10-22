@@ -76,12 +76,15 @@ export default function VideoCard({ video, onSelectVideo, onDeleteVideo }) {
             <span>{video.timeAgo || 'Recently'}</span>
           </div>
 
-          {video.album && (
-            <div className="card-tags">
-              <span className="card-tag album-tag">Album: {video.album}</span>
-              {video.genre && <span className="card-tag genre-tag">{video.genre}</span>}
-            </div>
-          )}
+          <div className="card-tags">
+            {video.isDatabaseItem && (
+              <span className="card-tag db-tag" style={{ background: 'rgba(59, 130, 246, 0.15)', color: '#38bdf8', fontWeight: 600 }}>
+                DB Song
+              </span>
+            )}
+            {video.album && <span className="card-tag album-tag">Album: {video.album}</span>}
+            {video.genre && <span className="card-tag genre-tag">{video.genre}</span>}
+          </div>
         </div>
 
         {/* 3-dot options menu */}

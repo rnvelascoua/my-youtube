@@ -157,9 +157,10 @@ export const INITIAL_VIDEOS = [
 export const CATEGORIES = [
   "All",
   "Music",
-  "Programming",
-  "Pop",
+  "OPM",
   "Rock",
+  "Pop",
+  "Programming",
   "Hip Hop",
   "Chillhop",
   "R&B / Soul",
