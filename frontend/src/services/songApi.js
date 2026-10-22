@@ -1,7 +1,19 @@
 import { INITIAL_VIDEOS } from '../data/mockVideos';
 
 const STORAGE_KEY = 'my_youtube_videos';
-const API_BASE_URL = '/reyes/songs';
+
+const getBaseUrl = () => {
+  let envUrl = import.meta.env.VITE_API_BASE_URL;
+  if (!envUrl) return '/reyes/songs';
+
+  envUrl = envUrl.trim().replace(/\/+$/, '');
+  if (!/^https?:\/\//i.test(envUrl)) {
+    envUrl = `https://${envUrl}`;
+  }
+  return `${envUrl}/reyes/songs`;
+};
+
+const API_BASE_URL = getBaseUrl();
 
 // Load stored videos or fallback to initial
 export function getLocalVideos() {

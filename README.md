@@ -76,3 +76,20 @@ Backend runs at **[http://localhost:8080](http://localhost:8080)**.
   - Auto-extracts YouTube video ID and displays instant thumbnail preview
   - Quick 1-click sample presets (Chill Lo-Fi, Bohemian Rhapsody, Spring Boot Tutorial)
   - Saves to Spring Boot REST API (`POST /reyes/songs`) and updates UI instantly.
+
+---
+
+## 🌐 Deploy to Render
+
+This project contains a [`render.yaml`](file:///C:/Users/Student-00/Desktop/VELASCO/WMD3A/JAVA/MY_YOUTUBE/render.yaml) Blueprint that automatically provisions:
+1. **PostgreSQL Database (`youtube-db`)**: Managed Free PostgreSQL instance.
+2. **Backend Web Service (`youtube-backend`)**: Dockerized Spring Boot application with auto-wired database credentials and CORS enabled.
+3. **Frontend Static Site (`youtube-frontend`)**: Vite React application with client-side rewrites and automated build pipeline.
+
+### Steps to Deploy:
+1. Commit and push the repository to GitHub.
+2. Go to **[dashboard.render.com](https://dashboard.render.com/)**.
+3. Click **New +** > **Blueprint**.
+4. Connect your GitHub repository `rnvelascoua/my-youtube`.
+5. Render will automatically detect `render.yaml` and provision all 3 resources!
+
