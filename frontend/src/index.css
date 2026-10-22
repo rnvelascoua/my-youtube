@@ -1,0 +1,95 @@
+/* YouTube Theme Variables & Global Reset */
+:root {
+  --yt-spec-brand-background-solid: #ff0000;
+  --yt-spec-red-indicator: #ff0000;
+  
+  /* Dark mode defaults */
+  --yt-bg: #0f0f0f;
+  --yt-surface: #181818;
+  --yt-surface-hover: #272727;
+  --yt-surface-active: #383838;
+  --yt-text-primary: #f1f1f1;
+  --yt-text-secondary: #aaaaaa;
+  --yt-text-muted: #717171;
+  --yt-border: #272727;
+  --yt-border-light: rgba(255, 255, 255, 0.1);
+  --yt-pill-bg: #272727;
+  --yt-pill-hover: #3f3f3f;
+  --yt-pill-active-bg: #f1f1f1;
+  --yt-pill-active-text: #0f0f0f;
+  --yt-badge-bg: rgba(0, 0, 0, 0.8);
+  --yt-shadow: rgba(0, 0, 0, 0.5) 0 4px 12px;
+}
+
+body.light-theme {
+  --yt-bg: #ffffff;
+  --yt-surface: #ffffff;
+  --yt-surface-hover: #f2f2f2;
+  --yt-surface-active: #e5e5e5;
+  --yt-text-primary: #0f0f0f;
+  --yt-text-secondary: #606060;
+  --yt-text-muted: #909090;
+  --yt-border: #e5e5e5;
+  --yt-border-light: rgba(0, 0, 0, 0.1);
+  --yt-pill-bg: #f2f2f2;
+  --yt-pill-hover: #e5e5e5;
+  --yt-pill-active-bg: #0f0f0f;
+  --yt-pill-active-text: #ffffff;
+  --yt-badge-bg: rgba(0, 0, 0, 0.75);
+  --yt-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: "Roboto", "Segoe UI", -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+  background-color: var(--yt-bg);
+  color: var(--yt-text-primary);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--yt-surface-hover);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--yt-surface-active);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+  color: inherit;
+}
+
+input, textarea, select {
+  font-family: inherit;
+  color: inherit;
+}
